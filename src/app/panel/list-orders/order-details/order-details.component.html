@@ -1,0 +1,26 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Order In Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>Client Data : </h5>
+        <strong>Name : </strong>{{order.userData?.name}}<br/>
+        <strong>Address : </strong>{{order.userData?.address}}<br/>
+        <strong>City : </strong>{{order.userData?.city}}<br/>
+        <div class="dropdown-divider"></div>
+        <h5>Order Data : </h5>
+        <ul *ngFor="let p of orderData">
+          <li>{{p.count}}<strong> x </strong>{{p.product.title}} with price {{p.product.price*p.count | currency:'USD'}}</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

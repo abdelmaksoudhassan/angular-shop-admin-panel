@@ -1,0 +1,38 @@
+.side{
+    background-color: #f4f4f8   ;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    z-index: 2;
+}
+.dropdown-divider{
+    border-top: 1px solid #36454f    
+}
+ul{
+    width: 100%;
+    padding: 0px;
+}
+li{
+    padding: 5px;
+    list-style: none;
+    transition: all 0.3s linear;
+}
+a{
+    color: #36454f;
+}
+li:hover{
+    background-color: #e6e6ea ;
+    text-decoration: none;
+    transition: all 0.3s linear; 
+}
+li:hover a{
+    text-decoration: none;
+}
+@media(min-width: 700px){
+    li{
+        font-size: 20px;
+    }
+}
+.active{
+    background-color: #e6e6ea ;
+}

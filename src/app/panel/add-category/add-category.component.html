@@ -1,0 +1,22 @@
+<h3>Add New Category</h3>
+<h5>After Adding Category You will Be Able to Add Products To It</h5>
+<form #f="ngForm" (ngSubmit)="saveCategory(f.value)">
+    <div class="row">
+        <div class="form-group">
+            <input type="text" ngModel #name="ngModel" class="form-control" placeholder="Type Category Name.." name="name" id="name" required minlength="5" />
+            <div class="alert alert-danger" *ngIf="name.errors && name.touched">
+                <div *ngIf="name.errors.required">Category Name Is Required</div>
+                <div *ngIf="name.errors.minlength">
+                    Category Name Must Be At Least {{name.errors.minlength.requiredLength}} Letters
+                </div>
+            </div>
+            <div class="alert alert-danger" *ngIf="errMsg">{{errMsg}}</div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success" style="margin-left: 20px;">Save</button>
+        </div>
+    </div>
+</form>
+<div *ngIf="loading">
+    <app-loader></app-loader>
+</div>

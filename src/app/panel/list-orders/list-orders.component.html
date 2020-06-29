@@ -1,0 +1,23 @@
+<h5>Order List :-</h5>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td class="image-res">
+            {{order.userData.name}}
+        </td>
+        <td>
+            <button type="button" (click)="onDetails(order)" class="btn btn-info btn-block" data-toggle="modal" data-target="#exampleModal">
+              Details
+            </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="height: 30px;"></div>
+  <app-order-details [order]="order"></app-order-details>
