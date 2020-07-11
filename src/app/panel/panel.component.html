@@ -1,12 +1,13 @@
-<div class="parent">
-    <div>
-        <div class="tmp"></div>
-        <app-side-nav></app-side-nav>
-    </div>
-    <div>
-        <h3 *ngIf="user">Hello {{userName}} ,Now You Are Logged In..</h3>
+<div class="container">
+    <div class="parent">
         <div>
-            <router-outlet></router-outlet>
+            <app-side-nav></app-side-nav>
+        </div>
+        <div>
+            <h3 *ngIf="user">Hello {{userName}} ,Now You Are Logged In..</h3>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
         </div>
     </div>
 </div>

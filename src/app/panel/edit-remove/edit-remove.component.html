@@ -43,8 +43,8 @@
             <app-loader></app-loader>
         </div>
         <div class="alert alert-danger" *ngIf="errMsg">{{errMsg}}</div>
-        <button type="submit" class="btn btn-success" [disabled]="!f.valid" >Save Modifications</button>
-        <button type="button" class="btn btn-danger" style="margin-left: 10px;" (click)="deleteProduct()">Delete Product</button>
-        <button type="button" class="btn btn-warning" style="margin-left: 10px;" (click)="cancel()">Cancel</button>
+        <button type="submit" class="btn btn-success margin-btn" [disabled]="!f.valid" >Save</button>
+        <button type="button" class="btn btn-danger margin-btn" (click)="deleteProduct()">Delete</button>
+        <button type="button" class="btn btn-warning margin-btn" (click)="cancel()">Cancel</button>
     </form>
 </div>

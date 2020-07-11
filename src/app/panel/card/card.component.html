@@ -1,8 +1,8 @@
-<div class="media">
-    <div class="media-body">
-      <div><strong>Product Title : </strong>{{title}}</div>
-      <div><strong>Product Category : </strong>{{category}}</div>
-      <div><strong>Product Price : </strong>{{price | currency:'USD'}}</div>
-    </div>
-    <img [src]="imgURL" width="100" height="100" class="mr-3" [alt]="title">
+<div class="card" style="width: 16rem;">
+  <img [src]="imgURL" class="card-img-top" [alt]="title">
+  <div class="card-body">
+    <div><strong>Product Title : </strong>{{title}}</div>
+    <div><strong>Product Category : </strong>{{category}}</div>
+    <div><strong>Product Price : </strong>{{price | currency:'USD'}}</div>
   </div>
+</div>

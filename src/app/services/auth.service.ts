@@ -44,7 +44,7 @@ export class AuthService {
     if(!user) {
       return null
     }
-    if(new Date().getTime() < user.expDate){
+    if(new Date().getTime() >= user.expDate){
       this.removeUser()
       this.router.navigate([''])
     }else{
@@ -54,7 +54,7 @@ export class AuthService {
   }
 
   private handleUser(res){
-    const expDate = new Date().getTime() + +res.expiresIn
+    const expDate = new Date().getTime() + +res.expiresIn*1000
     var user = new User(res.email,res.localId,res.idToken,expDate)
     this.user.next(user)
     localStorage.setItem('user', JSON.stringify(user))

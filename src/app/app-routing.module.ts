@@ -17,7 +17,8 @@ const routes: Routes = [
     { path:'List-All-Products',component:ListAllComponent },
     { path:'products/:id',component:EditRemoveComponent },
     { path:'List-All-Orders',component:ListOrdersComponent },
-    { path:'Add-New-Category',component:AddCategoryComponent }
+    { path:'Add-New-Category',component:AddCategoryComponent },
+    { path:'**',redirectTo:'' }
   ] }
 ];
 

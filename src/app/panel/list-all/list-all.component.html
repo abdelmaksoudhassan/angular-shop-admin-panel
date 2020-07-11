@@ -7,7 +7,7 @@
         <tr>
           <th scope="col" class="image-res">Image</th>
           <th scope="col">Title</th>
-          <th scope="col">Price</th>
+          <th scope="col" class="hide">Price</th>
           <th scope="col">Operations</th>
         </tr>
       </thead>
@@ -17,7 +17,7 @@
               <img width="100" height="100" [src]="p.imgURL" [alt]="p.imgURL" />
           </td>
           <td>{{p.title}}</td>
-          <td>{{p.price}}</td>
+          <td class="hide">{{p.price}}</td>
           <td>
               <a [routerLink]="['../products',p.id]">Edit Or Remove</a>
           </td>

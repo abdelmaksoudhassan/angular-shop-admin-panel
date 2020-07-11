@@ -7,7 +7,8 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./side-nav.component.css']
 })
 export class SideNavComponent implements OnInit {
-
+  show = true
+  sideClass = 'show'
   constructor(private AuthService:AuthService) { }
 
   ngOnInit(): void {
@@ -15,6 +16,10 @@ export class SideNavComponent implements OnInit {
 
   logOut(){
     this.AuthService.logOut()
+  }
+  toggle(){
+    this.show =! this.show
+    this.show ? this.sideClass='show' : this.sideClass='hide'
   }
 
 }

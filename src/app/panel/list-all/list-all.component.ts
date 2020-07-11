@@ -23,7 +23,7 @@ export class ListAllComponent implements OnInit,OnDestroy {
   }
 
   onSearch(query:string){
-    this.filteredProducts = (query) ? this.products.filter(x=>x.title.toLowerCase().includes(query)) : this.products
+    this.filteredProducts = (query) ? this.products.filter(x=>x.title.toLowerCase().includes(query.toLowerCase())) : this.products
   }
 
   ngOnDestroy(){
